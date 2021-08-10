@@ -7,7 +7,7 @@
     <script src="https://raw.githack.com/fcor/arjs-gestures/master/dist/gestures.js"></script>
 
     <script>
-      console.log('test15');
+      console.log('test16');
     </script>
     <body style="margin : 0px; overflow: hidden;">
         <a-scene 
@@ -17,7 +17,9 @@
             vr-mode-ui="enabled: false"
             gesture-detector
             id="scene">
-          
+              <a-assets>
+                <img id="my-image" src="https://test43545.github.io/Test435545/crabs.jpg">
+              </a-assets>
               <a-marker 
                   type="pattern" 
                   preset="custom" 
@@ -26,10 +28,6 @@
                   emitevents="true"
                   cursor="fuse: false; rayOrigin: mouse;"
                   id="markerA">
-                    <a-assets>
-                      <img id="my-image" src="https://test43545.github.io/Test435545/crabs.jpg">
-                    </a-assets>
-
                     <!-- Using the asset management system. -->
                     <a-image src="#my-image"></a-image>
               </a-marker>
