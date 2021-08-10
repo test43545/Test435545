@@ -7,7 +7,7 @@
     <script src="https://raw.githack.com/fcor/arjs-gestures/master/dist/gestures.js"></script>
 
     <script>
-      console.log('test13');
+      console.log('test14');
     </script>
     <body style="margin : 0px; overflow: hidden;">
         <a-scene 
@@ -24,20 +24,16 @@
                   url="https://test43545.github.io/Test435545/pattern-testMarker3-(1).patt"
                   raycaster="objects: .clickable"
                   emitevents="true"
-                  cursor="fuse: false; rayOrigin: mouse;">
+                  cursor="fuse: false; rayOrigin: mouse;"
+                  id="markerA">
                     <a-entity
-                      position="0 0 0"
-                      rotation="0 0 180"
-                      scale="3 3 3"
+                      position="5 0 0"
+                      rotation="0 0 0"
+                      scale="5 5 5"
                       gltf-model="https://test43545.github.io/Test435545/scene.gltf"
                       class="clickable"
                       gesture-handler
                     ></a-entity>
-              </a-marker>
-          
-              <a-marker preset="hiro">
-                  <!-- we use cors proxy to avoid cross-origin problems ATTENTION! you need to set up your server -->
-                <a-image src="https://test43545.github.io/Test435545/goat_tree.jpg" width="6" height="3"></a-image>
               </a-marker>
               <a-entity camera></a-entity>
       </a-scene>
