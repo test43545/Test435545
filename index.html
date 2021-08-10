@@ -11,13 +11,19 @@
         <a-scene embedded arjs>
           
         <a-marker type="pattern" preset="custom" url="https://test43545.github.io/Test435545/pattern-testMarker3-(1).patt">
-          <a-image src="https://test43545.github.io/Test435545/goat_tree.jpg" width="6" height="3"></a-image>
+     
+            <a-assets>
+              <a-asset-item id="tree" src="https://test43545.github.io/Test435545/scene.gltf"></a-asset-item>
+            </a-assets>
+
+            <a-entity gltf-model="#tree"></a-entity>
+         
         </a-marker>
           
         <a-marker preset="hiro">
             <!-- we use cors proxy to avoid cross-origin problems ATTENTION! you need to set up your server -->
             
-          <a-image src="https://test43545.github.io/Test435545/goat_tree.jpg"></a-image>
+          <a-image src="https://test43545.github.io/Test435545/goat_tree.jpg" width="6" height="3"></a-image>
         </a-marker>
           
       
