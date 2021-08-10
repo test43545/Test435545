@@ -5,21 +5,18 @@
     <!-- we import arjs version without NFT but with marker + location based support -->
     <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
     <script>
-      console.log('test6');
+      console.log('test7');
     </script>
     <body style="margin : 0px; overflow: hidden;">
         <a-scene embedded arjs>
-          
-          <a-marker type="pattern" preset="custom" url="https://test43545.github.io/Test435545/pattern-testMarker3-(1).patt">
-            
-              <a-assets>
-                <a-asset-item id="tree" src="https://test43545.github.io/Test435545/scene.gltf"></a-asset-item>
-              </a-assets>
-
-              <a-entity gltf-model="#tree"></a-entity>
-           
-          </a-marker>
-         
+        <a-marker type="pattern" preset="custom" url="https://test43545.github.io/Test435545/pattern-testMarker3-(1).patt">
+          <a-entity
+            position="0 0 0"
+            scale="0.05 0.05 0.05"
+            gltf-model="https://test43545.github.io/Test435545/scene.gltf"
+          ></a-entity>
+        </a-marker>
         <a-entity camera></a-entity>
+      </a-scene>
     </body>
 </html>
