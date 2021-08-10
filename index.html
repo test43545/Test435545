@@ -26,14 +26,12 @@
                   emitevents="true"
                   cursor="fuse: false; rayOrigin: mouse;"
                   id="markerA">
-                    <a-entity
-                      position="0 0 0"
-                      rotation="0 0 0"
-                      scale="5 5 5"
-                      gltf-model="https://test43545.github.io/Test435545/scene.gltf"
-                      class="clickable"
-                      gesture-handler
-                    ></a-entity>
+                    <a-assets>
+                      <img id="my-image" src="https://test43545.github.io/Test435545/crabs.jpg">
+                    </a-assets>
+
+                    <!-- Using the asset management system. -->
+                    <a-image src="#my-image"></a-image>
               </a-marker>
               <a-entity camera></a-entity>
       </a-scene>
