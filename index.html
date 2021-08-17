@@ -8,11 +8,8 @@
     <script>
       window.onload = function () {
         document
-          .querySelector(".say-hi-button")
+          .querySelector(".redirect")
           .addEventListener("click", function () {
-            // here you can change also a-scene or a-entity properties, like
-            // changing your 3D model source, size, position and so on
-            // or you can just open links, trigger actions...
             window.location = 'https://opensea.io/h2co3';
           });
       };
@@ -30,19 +27,19 @@
           z-index: 10;
         }
 
-        .say-hi-button {
-          padding: 0.25em;
-          border-radius: 4px;
+        .redirect {
+          padding: 0.5em;
+          border-radius: 5px;
           border: none;
-          background: white;
-          color: black;
+          background: rgb(24, 104, 183);
+          color: white;
           width: 4em;
           height: 2em;
         }
       </style>
     <body style="margin : 0px; overflow: hidden;">
       <div class="buttons">
-        <button class="say-hi-button">SAY HI!</button>
+        <button class="redirect">See my work on Opensea.io</button>
       </div>
       <a-scene 
          embedded 
