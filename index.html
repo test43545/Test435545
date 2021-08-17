@@ -10,15 +10,14 @@
       console.log('test18');
     </script>
     <script>
-      AFRAME.registerComponent('markerhandler', {
-        init: function () {
-          this.el.sceneEl.addEventListener('markerFound', () => {
-            // redirect to custom URL
-            console.log('MarkerFoundFDP');
-          });
-      });
-      },
-  </script>
+        AFRAME.registerComponent('markerhandler', {
+          init: function () {
+            this.el.sceneEl.addEventListener('markerFound', () => {
+              console.log('TROUVé !');
+            });
+          }
+        });
+    </script>
     <style>
       .arjs-loader {
         height: 100%;
