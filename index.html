@@ -9,37 +9,60 @@
     <script>
       console.log('test17');
     </script>
+    <style>
+      .arjs-loader {
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.8);
+        z-index: 9999;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .arjs-loader div {
+        text-align: center;
+        font-size: 1.25em;
+        color: white;
+     }
+    </style>
     <body style="margin : 0px; overflow: hidden;">
-        <a-scene 
-           embedded 
-           arjs
-           renderer="logarithmicDepthBuffer: true;"
-            vr-mode-ui="enabled: false"
-            gesture-detector
-            id="scene">
-              <a-marker 
-                  type="pattern"
-                  smooth="true"
-                  smoothCount="10"
-                  smoothTolerance="0.2"
-                  smoothThreshold="7"
-                  preset="custom" 
-                  url="https://test43545.github.io/Test435545/pattern-00bis.patt"
-                  raycaster="objects: .clickable"
-                  emitevents="true"
-                  cursor="fuse: false; rayOrigin: mouse;"
-                  id="markerA">
-                    <!-- Using the asset management system. -->
-                    <a-entity
-                      position="0 0 0"
-                      rotation="0 0 0"
-                      scale="5 5 5"
-                      gltf-model="https://test43545.github.io/Test435545/GALAXY_0qua.gltf"
-                      class="clickable"
-                      gesture-handler
-                    ></a-entity>
-              </a-marker>
-              <a-entity camera></a-entity>
+      <div class="arjs-loader">
+        <div>Loading, please wait...</div>
+      </div>
+      <a-scene 
+         embedded 
+         arjs
+         renderer="logarithmicDepthBuffer: true;"
+          vr-mode-ui="enabled: false"
+          gesture-detector
+          id="scene">
+            <a-marker 
+                type="pattern"
+                smooth="true"
+                smoothCount="10"
+                smoothTolerance="0.2"
+                smoothThreshold="7"
+                preset="custom" 
+                url="https://test43545.github.io/Test435545/pattern-00bis.patt"
+                raycaster="objects: .clickable"
+                emitevents="true"
+                cursor="fuse: false; rayOrigin: mouse;"
+                id="markerA">
+                  <!-- Using the asset management system. -->
+                  <a-entity
+                    position="0 0 0"
+                    rotation="0 0 0"
+                    scale="5 5 5"
+                    gltf-model="https://test43545.github.io/Test435545/GALAXY_0qua.gltf"
+                    class="clickable"
+                    gesture-handler
+                  ></a-entity>
+            </a-marker>
+          <a-entity camera></a-entity>
       </a-scene>
     </body>
 </html>
