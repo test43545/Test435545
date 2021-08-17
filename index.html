@@ -9,6 +9,16 @@
     <script>
       console.log('test18');
     </script>
+  
+    <script>
+      const marker = document.querySelector('a-marker');
+      marker.addEventListener('markerFound', () => {
+        document.getElementById('loader').className += 'none';
+      });
+      marker.addEventListener('markerLost', () => {
+        document.getElementById('loader').classList.remove('none');
+      });
+    </script>
     <style>
       .arjs-loader {
         height: 100%;
@@ -28,9 +38,12 @@
         font-size: 1.25em;
         color: white;
      }
+      .none {
+        display: none;
+      }
     </style>
     <body style="margin : 0px; overflow: hidden;">
-      <div class="arjs-loader">
+      <div class="arjs-loader" id='loader'>
         <div>Loading, please wait...</div>
       </div>
       <a-scene 
